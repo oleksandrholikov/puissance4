@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('../font/ComicNeue-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('../font/ComicNeue-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('../font/ComicNeue-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+body{
+    background-color: orange;
+    color: white;
+    font-family: 'Comic Neue', sans-serif ;
+    font-size: 30px;
+}
+main{
+    height: 100vh;
+}
+.first-page{    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.abs-centre{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.main-title{
+    font-size: 100px;
+    text-shadow: 2px 3px black;
+}
+.button{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+
+}
+.button:hover{
+    background-color: rgb(185, 122, 6);
+    border-color: transparent;
+    box-shadow: 0 3px rgba(112, 31, 31, 0.329);
+}
+/*-----Form-INFP-----*/
+.form-info{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(245, 188, 83);
+    border: 3px dashed coral;
+    padding: 20px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.form-info-title{
+    text-shadow: 0 2px black;
+}
+[type="color"]{
+    position: relative;
+}
+input{
+    outline: none;
+    border-radius: 30px;
+    padding-inline: 15px;
+    min-width: 100px;
+}
+input:focus{
+    border: 2px solid green;
+}
+.inable{
+    border-color: red;
+}
+/*-----playground-----*/
+.playground{
+    width: 60%;
+    height: auto;
+    border: 3px dashed rgb(245, 81, 22);
+    background-color: blue;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 5px;
+    justify-content: center;
+    /* position: relative; */
+}
+.cell {
+    width: 140px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;    
+}
+
+.chip {
+    width: 140px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    transition: top 0.7s ease-in-out;
+    border: 3px solid black;
+}
+/*-----Profil+MainPage-----*/
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+.player-profil{
+    width: 15%;
+    border: 2px green dashed;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 30px;
+    padding: 5px;
+}
+.profil-img{
+    max-width: 70%;
+}
+.img{
+    width: 100%;
+    border-radius: 5px;
+}
+.player1{
+    align-self: flex-start;
+    flex-direction: column;
+}
+.player2{
+    align-self: flex-end;
+    flex-direction: column-reverse;
+}
+.color-pions{
+    width: 40px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.h5{
+    color: blue;    
+}
+.whoesMove{
+    background-color: rgba(0, 128, 0, 0.349);
+}
+/*-----Hidden\activ section-----*/
+.display-hidden{
+    display: none;
+}
+.display-action{
+    display: flex;
+}
+/*----WINNER----*/
+@keyframes blink {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.win {
+    animation: blink 0.5s infinite;
+}

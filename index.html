@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.9/babel.min.js"></script>
+    <link rel="stylesheet" href="./style/normallise.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/icon.png">
+    <title>PUISSANCE 4</title>
+</head>
+<body>
+    <header class="header"></header>
+    <main >
+        <section class="first-page display-action abs-centre" id="first-page">
+            <h1 class="main-title">PUISSANCE 4</h1>
+            <span class="text">To start the game, press the button</span>
+            <button type="button" class="button" id="button-start-game">Start Game</button>
+        </section>
+        <section class="add-pleyers abs-centre display-hidden" id="add-pleyers">
+            <div class="form-info display-hidden" id="player-first" data-img="">
+                <h3 class="form-info-title">Add First Player</h3>
+                <input type="text" placeholder="Name" id="player-first-name" >
+                <div>
+                    <input type="color" class="color" name="color"  id="player-first-color" >                
+                    <!-- <label for="color">Choose color</label> -->
+                </div>
+                <input type="file" name="image" id="player-first-image" >
+                <button type="button" class="button" id="add-player-first">Add Player</button>
+            </div>
+            <div class="form-info  display-hidden" id="player-second" data-img="">
+                <h3 class="form-info-title">Add Second Player</h3>
+                <input type="text" placeholder="Name" id="player-second-name">
+                <div>
+                    <input type="color" class="color" name="color" id="player-second-color" >                
+                    <!-- <label for="color">Choose color</label> -->
+                </div>                
+                <input type="file" name="image" id="player-second-image" >
+                <button type="button" class="button" id="add-player-second">Add Player</button>
+            </div>
+        </section>
+        <section class="main display-hidden " id="main">
+            <div class="player-profil player1" id="player-profil-1">
+                <h5 class="h5">Player1</h5>
+                <div class="profil-img"><img src="#" alt="player1" class="img" id="img-1"></div>
+                <span class="prifil-name" id="name-1"></span>
+                <div class="color-pions" id="color-1"></div>
+                <div class="score"><span>SCORE: </span><span id="score1"></span></div>
+            </div>
+            <div class="playground abs-centre" id="playground"></div>
+            <div class="player-profil player2" id="player-profil-2">
+                <h5 class="h5">Player2</h5>
+                <div class="profil-img"><img src="#" alt="player2" class="img" id="img-2"></div>
+                <span class="prifil-name" id="name-2"></span>
+                <div class="color-pions" id="color-2"></div>
+                <div class="score"><span>SCORE: </span><span id="score2"></span></div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/script/main.js"></script>
+</body>
+</html>
